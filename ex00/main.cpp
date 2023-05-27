@@ -10,4 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 
+int	main(void)
+{
+	ClapTrap clap("frank");
+	ClapTrap clap2;
+	clap.takeDamage(5);
+	clap.takeDamage(4);
+	clap2 = clap;
+	clap2.setName("Gonk");
+	clap.beRepaired(8);
+	clap.takeDamage(6);
+	clap2.takeDamage(6);
+	clap.takeDamage(6);
+	clap2.takeDamage(6);
+
+
+	return (0);
+}
