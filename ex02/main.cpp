@@ -10,42 +10,43 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap clap("Frank");
-	ClapTrap clap2;
+	FragTrap frag("Frank");
+	frag.highFivesGuys();
+	FragTrap frag2;
 
-	clap.takeDamage(5);
-	clap.takeDamage(4);
+	frag.takeDamage(5);
+	frag.takeDamage(4);
 
-	clap2.attack("John");
-	clap2.takeDamage(20);
+	frag2.attack("John");
+	frag2.takeDamage(20);
 
-	clap2 = clap;
-	clap2.setName("Gonk");
+	frag2 = frag;
+	frag2.setName("Gonk");
 
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
+	frag.beRepaired(8);
 
-	clap.beRepaired(8);
-	clap.attack("Gonk");
+	frag.beRepaired(8);
+	frag.attack("Gonk");
 
 
 
-	clap.takeDamage(6);
-	clap.takeDamage(6);
+	frag.takeDamage(6);
+	frag.takeDamage(6);
 
-	clap2.takeDamage(6);
-	clap2.takeDamage(6);
+	frag2.takeDamage(6);
+	frag2.takeDamage(6);
 
 
 	return (0);

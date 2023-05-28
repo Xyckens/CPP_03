@@ -10,42 +10,43 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap clap("Frank");
-	ClapTrap clap2;
+	ScavTrap scav("Frank");
+	scav.guardGate();
+	ScavTrap scav2;
 
-	clap.takeDamage(5);
-	clap.takeDamage(4);
+	scav.takeDamage(5);
+	scav.takeDamage(4);
 
-	clap2.attack("John");
-	clap2.takeDamage(20);
+	scav2.attack("John");
+	scav2.takeDamage(20);
 
-	clap2 = clap;
-	clap2.setName("Gonk");
+	scav2 = scav;
+	scav2.setName("Gonk");
 
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
-	clap.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
+	scav.beRepaired(8);
 
-	clap.beRepaired(8);
-	clap.attack("Gonk");
+	scav.beRepaired(8);
+	scav.attack("Gonk");
 
 
 
-	clap.takeDamage(6);
-	clap.takeDamage(6);
+	scav.takeDamage(6);
+	scav.takeDamage(6);
 
-	clap2.takeDamage(6);
-	clap2.takeDamage(6);
+	scav2.takeDamage(6);
+	scav2.takeDamage(6);
 
 
 	return (0);

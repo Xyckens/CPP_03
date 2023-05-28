@@ -54,24 +54,24 @@ int	ClapTrap::getADamage(void) const
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "Default constructor used.\n";
-	setADamage(0);
-	setEnPoints(10);
-	setHitPoints(10);
+	std::cout << "Claptrap default constructor used.\n";
+	setADamage(30);
+	setEnPoints(100);
+	setHitPoints(100);
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Default constructor with name used.\n";
-	setADamage(0);
-	setEnPoints(10);
-	setHitPoints(10);
+	std::cout << "Claptrap default constructor with name used.\n";
+	setADamage(30);
+	setEnPoints(100);
+	setHitPoints(100);
 	setName(name);
 }
 
 ClapTrap::ClapTrap(const ClapTrap& to_copy)
 {
-	std::cout << "Copy constructor used.\n";
+	std::cout << "Claptrap copy constructor used.\n";
 	setADamage(to_copy.getADamage());
 	setEnPoints(to_copy.getEnPoints());
 	setHitPoints(to_copy.getHitPoints());
@@ -80,12 +80,12 @@ ClapTrap::ClapTrap(const ClapTrap& to_copy)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor used.\n";
+	std::cout << "Claptrap destructor used.\n";
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& other)
 {
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "Claptrap copy assignment operator called\n";
 	setADamage(other.getADamage());
 	setEnPoints(other.getEnPoints());
 	setHitPoints(other.getHitPoints());
