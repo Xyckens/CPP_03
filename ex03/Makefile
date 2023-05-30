@@ -10,15 +10,17 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = ex03
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -Wshadow-std=c++98
 
 SRC = main.cpp \
 	ClapTrap.cpp \
-	FragTrap.cpp
+	FragTrap.cpp \
+	ScavTrap.cpp \
+	DiamondTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
