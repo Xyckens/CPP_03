@@ -28,14 +28,11 @@ int	main(void)
 	diam.beRepaired(8);
 	diam.attack("Gonk");
 
-
-
 	diam.takeDamage(30);
 	diam.takeDamage(30);
 
 	diam2.takeDamage(30);
 	diam2.takeDamage(30);
-
 
 	return (0);
 }
