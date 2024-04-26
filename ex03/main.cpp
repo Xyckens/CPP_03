@@ -14,25 +14,27 @@
 
 int	main(void)
 {
-	DiamondTrap diam("Frank");
-	diam.whoAmI();
-	DiamondTrap diam2;
+	DiamondTrap Gonk("Gonk");
 
-	diam.takeDamage(5);
-	diam.takeDamage(4);
+	Gonk.attack("Rui");
+	Gonk.attack("Manuel");
+	Gonk.attack("Maria");
+	Gonk.attack("Leonor");
+	Gonk.attack("Gonk");
+	Gonk.attack("Jose");
+	Gonk.highFivesGuys();
+	Gonk.whoAmI();
 
-	diam2.attack("John");
-	diam.attack("John");
-	diam2.takeDamage(20);
+    DiamondTrap Filipe("Filipe");
 
-	diam.beRepaired(8);
-	diam.attack("Gonk");
-
-	diam.takeDamage(30);
-	diam.takeDamage(30);
-
-	diam2.takeDamage(30);
-	diam2.takeDamage(30);
+	while (Filipe.getHitPoints())
+	{
+		Filipe.takeDamage(20);
+		Filipe.beRepaired(10);
+	}
+	Filipe.takeDamage(1);
+	Filipe.highFivesGuys();
+	Filipe.whoAmI();
 
 	return (0);
 }

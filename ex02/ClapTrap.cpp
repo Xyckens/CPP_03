@@ -86,6 +86,8 @@ ClapTrap::~ClapTrap()
 ClapTrap& ClapTrap::operator=(ClapTrap const& other)
 {
 	std::cout << "Claptrap copy assignment operator called\n";
+	if (this == &other)
+		return (*this);
 	setADamage(other.getADamage());
 	setEnPoints(other.getEnPoints());
 	setHitPoints(other.getHitPoints());

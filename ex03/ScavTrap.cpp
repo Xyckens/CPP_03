@@ -15,17 +15,17 @@
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "Scav name constructor called.\n";
-	setEnPoints(100);
+	setEnPoints(50);
 	setHitPoints(100);
-	setADamage(30);
+	setADamage(20);
 }
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "Scav constructor called.\n";
-	setEnPoints(100);
+	setEnPoints(50);
 	setHitPoints(100);
-	setADamage(30);	
+	setADamage(20);	
 }
 
 void	ScavTrap::guardGate(void)
@@ -41,6 +41,8 @@ ScavTrap::~ScavTrap()
 ScavTrap& ScavTrap::operator=(ScavTrap const& other)
 {
 	std::cout << "Scavtrap copy assignment operator called\n";
+	if (this == &other)
+		return (*this);
 	ClapTrap::operator=(other);
 	return (*this);
 }

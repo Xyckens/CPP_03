@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string		name;
 	unsigned int	hitPoints;
 	unsigned int	enPoints;
@@ -31,19 +31,19 @@ public:
 
 	ClapTrap& operator=(ClapTrap const& other);
 
-	void	attack(const std::string& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+	void			attack(const std::string& target);
+	void			takeDamage(unsigned int amount);
+	void			beRepaired(unsigned int amount);
 
-	void	setName(const std::string name);
-	void	setHitPoints(const int hitPoints);
-	void	setEnPoints(const int enPoints);
-	void	setADamage(const int aDamage);
+	void			setName(const std::string name);
+	void			setHitPoints(const int hitPoints);
+	void			setEnPoints(const int enPoints);
+	void			setADamage(const int aDamage);
 
-	std::string	getName(void) const;
-	int			getHitPoints(void) const;
-	int			getEnPoints(void) const;
-	int			getADamage(void) const;
+	std::string		getName(void) const;
+	int				getHitPoints(void) const;
+	int				getEnPoints(void) const;
+	int				getADamage(void) const;
 	
 };
 

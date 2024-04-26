@@ -12,9 +12,9 @@
 
 NAME = ex03
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -Wshadow-std=c++98
+CXX_FLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 
 SRC = main.cpp \
 	ClapTrap.cpp \
@@ -22,12 +22,15 @@ SRC = main.cpp \
 	ScavTrap.cpp \
 	DiamondTrap.cpp
 
+%.o:	%.cpp
+	$(CXX) $(CXX_FLAGS) -c $< -o $@
+
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(C_FLAGS) $(SRC) -o $(NAME)
+	$(CXX) $(CXX_FLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)

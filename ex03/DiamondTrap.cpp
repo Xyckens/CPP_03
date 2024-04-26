@@ -48,6 +48,8 @@ void	DiamondTrap::attack(const std::string& target)
 DiamondTrap& DiamondTrap::operator=(DiamondTrap const& other)
 {
 	std::cout << "Diamondtrap copy assignment operator called.\n";
+	if (this == &other)
+		return (*this);
 	setName(other.getName() + "_clap_name");
 	ClapTrap::operator=(other);
 	return (*this);
