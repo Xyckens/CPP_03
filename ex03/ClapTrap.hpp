@@ -35,10 +35,10 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
-	void	setName(const std::string name);
-	void	setHitPoints(const int hitPoints);
-	void	setEnPoints(const int enPoints);
-	void	setADamage(const int aDamage);
+	void	setName(const std::string _name);
+	void	setHitPoints(const int _hitPoints);
+	void	setEnPoints(const int _enPoints);
+	void	setADamage(const int _aDamage);
 
 	std::string	getName(void) const;
 	int			getHitPoints(void) const;

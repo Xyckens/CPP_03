@@ -30,7 +30,12 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 void	ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode.\n";
+	if (getHitPoints() > 0 && getEnPoints() > 0)
+		std::cout << "ScavTrap " << getName() << " is now in Gate keeper mode.\n";
+	else if (getEnPoints() <= 0 && getHitPoints() > 0)
+		std::cout << "Scavtrap " << getName() << " can't change mode without energy.\n";
+	else if (getHitPoints() <= 0)
+		std::cout << "Scavtrap " << getName() << " can't change mode if they are dead.\n";
 }
 
 ScavTrap::~ScavTrap()
@@ -55,8 +60,8 @@ void	ScavTrap::attack(const std::string& target)
 		std::cout << " causing " << getADamage() << " points of damage!\n";
 		setEnPoints(getEnPoints() - 1);
 	}
-	if (getEnPoints() <= 0 && getHitPoints() > 0)
+	else if (getEnPoints() <= 0 && getHitPoints() > 0)
 		std::cout << "Scavtrap " << getName() << " can't attack without energy.\n";
-	if (getHitPoints() <= 0)
+	else if (getHitPoints() <= 0)
 		std::cout << "Scavtrap " << getName() << " can't attack if they are dead.\n";
 }

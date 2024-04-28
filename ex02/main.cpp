@@ -14,40 +14,27 @@
 
 int	main(void)
 {
-	FragTrap frag("Frank");
+	FragTrap frag("Ana");
+
+	frag.attack("Rui");
+	frag.attack("Manuel");
+	frag.attack("Maria");
+	frag.attack("Leonor");
+	frag.attack("Ana");
+	frag.attack("Jose");
 	frag.highFivesGuys();
-	FragTrap frag2;
 
-	frag.takeDamage(5);
-	frag.takeDamage(4);
+    FragTrap Filipe("Filipe");
 
-	frag2.attack("John");
-	frag2.takeDamage(20);
-
-	frag2 = frag;
-	frag2.setName("Gonk");
-
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-	frag.beRepaired(8);
-
-	frag.beRepaired(8);
-	frag.attack("Gonk");
-
-
-
-	frag.takeDamage(6);
-	frag.takeDamage(6);
-
-	frag2.takeDamage(6);
-	frag2.takeDamage(6);
-
+	while (Filipe.getHitPoints())
+	{
+		Filipe.takeDamage(20);
+		Filipe.beRepaired(10);
+	}
+	Filipe.takeDamage(1);
+	Filipe.highFivesGuys();
+	frag = Filipe;
+	std::cout << "New name: " << frag.getName() << std::endl;
 
 	return (0);
 }

@@ -30,7 +30,12 @@ FragTrap::FragTrap() : ClapTrap()
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << getName() << " requests a high Five from you 👉.\n";
+	if (getHitPoints() > 0 && getEnPoints() > 0)
+		std::cout << "FragTrap " << getName() << " requests a high Five from you 🫵.\n";
+	else if (getEnPoints() <= 0 && getHitPoints() > 0)
+		std::cout << "Fragtrap " << getName() << " can't vibe with you without energy.\n";
+	else if (getHitPoints() <= 0)
+		std::cout << "Fragtrap " << getName() << " can't vibe with you if they are dead.\n";
 }
 
 FragTrap::~FragTrap()
@@ -55,8 +60,8 @@ void	FragTrap::attack(const std::string& target)
 		std::cout << " causing " << getADamage() << " points of damage!\n";
 		setEnPoints(getEnPoints() - 1);
 	}
-	if (getEnPoints() <= 0 && getHitPoints() > 0)
+	else if (getEnPoints() <= 0 && getHitPoints() > 0)
 		std::cout << "Fragtrap " << getName() << " can't attack without energy.\n";
-	if (getHitPoints() <= 0)
+	else if (getHitPoints() <= 0)
 		std::cout << "Fragtrap " << getName() << " can't attack if they are dead.\n";
 }

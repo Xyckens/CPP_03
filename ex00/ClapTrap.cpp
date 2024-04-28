@@ -103,9 +103,9 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << " causing " << getADamage() << " points of damage!\n";
 		setEnPoints(getEnPoints() - 1);
 	}
-	if (getEnPoints() <= 0 && getHitPoints() > 0)
+	else if (getEnPoints() <= 0 && getHitPoints() > 0)
 		std::cout << "Claptrap " << getName() << " can't attack without energy.\n";
-	if (getHitPoints() <= 0)
+	else if (getHitPoints() <= 0)
 		std::cout << "Claptrap " << getName() << " can't attack if they are dead.\n";
 }
 
@@ -133,8 +133,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		setHitPoints(getHitPoints() + amount);
 		setEnPoints(getEnPoints() - 1);
 	}
-	if (getEnPoints() <= 0 && getHitPoints() > 0)
+	else if (getEnPoints() <= 0 && getHitPoints() > 0)
 		std::cout << "Claptrap " << getName() << " can't repair without energy.\n";
-	if (getHitPoints() <= 0)
+	else if (getHitPoints() <= 0)
 		std::cout << "Claptrap " << getName() << " can't repair if they are dead.\n";
 }

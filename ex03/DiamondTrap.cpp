@@ -37,7 +37,12 @@ DiamondTrap::~DiamondTrap()
 
 void	DiamondTrap::whoAmI(void)
 {
-	std::cout << "Am I " << this->name << " or am I " << getName() << "?🤔\n";
+	if (getHitPoints() > 0 && getEnPoints() > 0)
+		std::cout << "Am I " << this->name << " or am I " << getName() << "?🤔\n";
+	else if (getEnPoints() <= 0 && getHitPoints() > 0)
+		std::cout << "DiamondTrap " << getName() << " can't ponder without energy.\n";
+	else if (getHitPoints() <= 0)
+		std::cout << "DiamondTrap " << getName() << " can't ponder if they are dead.\n";
 }
 
 void	DiamondTrap::attack(const std::string& target)

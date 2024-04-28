@@ -25,16 +25,16 @@ int	main(void)
 	Gonk.highFivesGuys();
 	Gonk.whoAmI();
 
-    DiamondTrap Filipe("Filipe");
+    DiamondTrap Hank("Hank");
 
-	while (Filipe.getHitPoints())
+	while (Hank.getHitPoints())
 	{
-		Filipe.takeDamage(20);
-		Filipe.beRepaired(10);
+		Hank.takeDamage(20);
+		Hank.beRepaired(10);
 	}
-	Filipe.takeDamage(1);
-	Filipe.highFivesGuys();
-	Filipe.whoAmI();
+	Hank.takeDamage(1);
+	Hank.highFivesGuys();
+	Hank.whoAmI();
 
 	return (0);
 }

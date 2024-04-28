@@ -14,40 +14,28 @@
 
 int	main(void)
 {
-	ScavTrap scav("Frank");
+	ScavTrap scav("Ana");
+
+	scav.attack("Rui");
+	scav.attack("Manuel");
+	scav.attack("Maria");
+	scav.attack("Leonor");
+	scav.attack("Ana");
+	scav.attack("Jose");
 	scav.guardGate();
-	ScavTrap scav2;
 
-	scav.takeDamage(5);
-	scav.takeDamage(4);
+    ScavTrap Filipe("Filipe");
 
-	scav2.attack("John");
-	scav2.takeDamage(20);
+	while (Filipe.getHitPoints())
+	{
+		Filipe.takeDamage(20);
+		Filipe.beRepaired(10);
+	}
+	Filipe.takeDamage(1);
+	Filipe.guardGate();
+	scav = Filipe;
+	std::cout << "New name: " << scav.getName() << std::endl;
 
-	scav2 = scav;
-	scav2.setName("Gonk");
-
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-	scav.beRepaired(8);
-
-	scav.beRepaired(8);
-	scav.attack("Gonk");
-
-
-
-	scav.takeDamage(6);
-	scav.takeDamage(6);
-
-	scav2.takeDamage(6);
-	scav2.takeDamage(6);
-
-
+	return (0);
 	return (0);
 }
